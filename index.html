@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Tailwind css CDN  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind css CDN  -->
+  </head>
+  <body class="bg-gray-900">
+    <h2 class="text-2xl text-white text-center mt-20 font-bold">Signup</h2>
+    <div class="flex justify-center items-center my-10">
+      <form id="signupForm" action="" class="border border-white rounded-lg flex gap-3 flex-col justify-center items-center text-white p-8 w-[30%]">
+        <div class="flex flex-col gap-1 w-full">
+          <label for="userEmail">Email</label>
+          <input
+            class="bg-transparent px-4 py-1 border border-white rounded-lg shadow-lg focus:shadow-slate-400/100"
+            id="userEmail"
+            type="email"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-1 w-full">
+          <label for="userPass">Password</label>
+          <input
+            class="bg-transparent px-4 py-1 border border-white rounded-lg shadow-lg focus:shadow-slate-600/100 "
+            id="userPass"
+            type="password"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-1 w-1/2 mt-8">
+          <button
+            class="bg-blue-600 font-medium hover:scale-110 duration-300 py-1 border border-white rounded-lg shadow-lg focus:shadow-slate-600/100 "
+            id="userPass"
+            type="password"
+            required
+          >Signup</button>
+        </div>
+        <div class="mt-5">
+          <span><p>Already have an accound ? <a class="text-blue-500" href="./login.html">Login</a> </p></span>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script type="module" src="./script.js"></script>
+</html>
+
+

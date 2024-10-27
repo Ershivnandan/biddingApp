@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidding app | landing</title>
+    <!-- Tailwind css CDN  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind css CDN  -->
+  </head>
+  <body id="projectBody" class="bg-gray-900 text-gray-100">
+    <nav
+      class="flex gap-5 justify-center items-center border mx-10 rounded-3xl py-2 mt-2"
+    >
+      <button
+        id="toggleModel"
+        class="border bg-transparent rounded-lg px-2 py-1 hover:scale-110 duration-300"
+      >
+        Add bidding
+      </button>
+      <button
+        id="logoutButton"
+        class="border bg-transparent rounded-lg px-2 py-1 hover:scale-110 duration-300"
+      >
+        Log out
+      </button>
+    </nav>
+
+    <div id="auctionCardGrid" class="grid grid-cols-4 gap-4 px-4 mt-5">
+        
+      
+    </div>
+
+    <!-- Modal  -->
+    <div
+      id="auctionForm"
+      class="hidden w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    >
+      <h2 class="text-xl font-bold mb-4 text-center">Create Auction</h2>
+      <img id="closeModelBtn" class="absolute top-2 right-2 cursor-pointer w-7" src="https://img.icons8.com/?size=100&id=71200&format=png&color=ffffff" alt="">
+      <form id="createAuctionForm">
+        <div id="imageInputContainer" class="mb-4 flex justify-center">
+          <input
+            type="file"
+            id="itemImage"
+            accept="image/*"
+            class="hidden"
+            required
+          />
+          <label
+            for="itemImage"
+            class="flex justify-center items-center border rounded w-full h-48 bg-gray-700 cursor-pointer"
+          >
+            <span id="imageInputPlaceholder" class="text-gray-400"
+              >Upload Image</span
+            >
+            <img
+              id="imagePreview"
+              src="#"
+              alt="Image Preview"
+              class="hidden w-full h-full object-contain rounded"
+            />
+          </label>
+        </div>
+        <div class="mb-4">
+          <input
+            type="text"
+            id="itemName"
+            placeholder="Item Name"
+            required
+            class="border rounded w-full py-2 px-3 bg-transparent text-white focus:outline-none shadow-lg focus:shadow-slate-500/50"
+          />
+        </div>
+        <div class="mb-4">
+          <textarea
+            rows="3"
+            cols="50"
+            id="itemDescription"
+            placeholder="Description"
+            required
+            class="border rounded w-full py-2 px-3 bg-transparent text-white focus:outline-none shadow-lg focus:shadow-slate-500/50"
+          ></textarea>
+        </div>
+        <div class="mb-4">
+          <input
+            type="number"
+            min="10"
+            id="startingPrice"
+            placeholder="Starting Price"
+            required
+            class="border rounded w-full py-2 px-3 bg-transparent text-white focus:outline-none shadow-lg focus:shadow-slate-500/50"
+          />
+        </div>
+        <button
+          type="submit"
+          id="submitButton"
+          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+        >
+          Create Auction
+        </button>
+      </form>
+    </div>
+  </body>
+  <script type="module" src="./landing.js"></script>
+</html>
+
+<!-- imageUrl
+: 
+"https://firebasestorage.googleapis.com/v0/b/realtimebiddingapp.appspot.com/o/auction_images%2Fimages.png?alt=media&token=f3587ffa-1896-4bc9-91de-f8448806b8c5"
+itemDescription
+: 
+"cscscs"
+itemId
+: 
+"-OAA-J1XSIz8I9E_jQI7"
+itemName
+: 
+"csdcsc"
+startingPrice
+: 
+"123"
+userId
+: 
+"Rf926WpPd9NNDcKEveRqPIQO4LY2" -->
